@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wangwen.movie.mapper.MovieMapper">
+
+    <select id="getNewMovie" resultType="com.wangwen.movie.bean.Movie">
+SELECT movie_id AS id ,movie_name AS movieName FROM movie;
+    </select>
+</mapper>
