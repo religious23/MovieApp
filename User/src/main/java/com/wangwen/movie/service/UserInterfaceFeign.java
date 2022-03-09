@@ -1,6 +1,6 @@
 package com.wangwen.movie.service;
 
-import com.wangwen.common.bean.R;
+import com.wangwen.core.domain.R;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 

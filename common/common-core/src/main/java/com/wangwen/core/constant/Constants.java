@@ -1,4 +1,4 @@
-package com.wangwen.common.constant;
+package com.wangwen.core.constant;
 
 /**
  * 通用常量信息

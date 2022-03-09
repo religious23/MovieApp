@@ -6,10 +6,17 @@
         <artifactId>SpringCloud</artifactId>
         <groupId>com.wangwen</groupId>
         <version>1.0-SNAPSHOT</version>
-    </parent>
+        </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>common</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>common-core</module>
+        <module>common-redis</module>
+    </modules>
+
+
 
 
 </project>

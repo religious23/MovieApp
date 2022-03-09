@@ -1,6 +1,6 @@
 package com.wangwen.movie.service;
 
-import com.wangwen.common.bean.R;
+import com.wangwen.core.domain.R;
 import com.wangwen.movie.bean.Movie;
 import org.springframework.stereotype.Component;
 

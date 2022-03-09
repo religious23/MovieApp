@@ -1,7 +1,7 @@
-package com.wangwen.common.bean;
+package com.wangwen.core.domain;
 
 
-import com.wangwen.common.constant.Constants;
+import com.wangwen.core.constant.Constants;
 
 import java.io.Serializable;
 
