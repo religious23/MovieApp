@@ -22,7 +22,7 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/buyMovie")
-    public R buyMovie(@RequestParam("id") Integer userId) {
+    public R buyMovie(@RequestParam("id") String userId) {
         return userService.buyMovie(userId);
     }
 

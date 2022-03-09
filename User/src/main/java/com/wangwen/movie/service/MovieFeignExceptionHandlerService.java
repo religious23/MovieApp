@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 public class MovieFeignExceptionHandlerService implements UserInterfaceFeign {
 
     @Override
-    public R getNewMovie() {
+    public R getNewMovie(String id) {
         return R.ok(new Movie(-1, "无此电影啊！"));
     }
 }

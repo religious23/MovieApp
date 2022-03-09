@@ -1,6 +1,6 @@
 package com.wangwen.movie.controller;
 
-import com.wangwen.common.bean.R;
+import com.wangwen.core.domain.R;
 import com.wangwen.movie.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +20,7 @@ public class MovieController {
     private MovieService movieService;
 
     @GetMapping("/movie")
-    public R getNewMovie() {
-        return R.ok(movieService.getNewMovie());
+    public R getNewMovie(String id) {
+        return R.ok(movieService.getNewMovie(id));
     }
 }

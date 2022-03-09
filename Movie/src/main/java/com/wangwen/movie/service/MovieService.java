@@ -13,5 +13,5 @@ import java.util.List;
  */
 public interface MovieService {
 
-    List<Movie> getNewMovie();
+    List<Movie> getNewMovie(String id);
 }

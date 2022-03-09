@@ -24,8 +24,8 @@ public class UserService {
     private UserInterfaceFeign userInterfaceFeign;
 
     //@HystrixCommand(fallbackMethod = "buyMovieFallbackMethod")
-    public R buyMovie(Integer id) {
-        return userInterfaceFeign.getNewMovie();
+    public R buyMovie(String id) {
+        return userInterfaceFeign.getNewMovie(id);
     }
 
     public Map<String, Object> buyMovieFallbackMethod(Integer id) {
