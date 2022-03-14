@@ -26,4 +26,14 @@ public class UserController {
         return userService.buyMovie(userId);
     }
 
+
+    @GetMapping("/queryTicketByMovieId")
+    public R queryTicketByMovieId(@RequestParam("movieId") String movieId) {
+        return userService.queryTicketByMovieId(movieId);
+    }
+
+    @GetMapping("/buyTicketById")
+    public R buyTicketById(@RequestParam("ticketId")String ticketId,  @RequestParam("userId")String userId) {
+        return userService.buyTicketById(ticketId,userId);
+    }
 }

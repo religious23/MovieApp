@@ -2,11 +2,13 @@ package com.wangwen.movie.service;
 
 import com.wangwen.core.domain.R;
 import com.wangwen.movie.bean.Movie;
+import com.wangwen.movie.service.feign.MovieInterfaceFeign;
+import com.wangwen.movie.service.feign.OrderInterfaceFeign;
+import com.wangwen.movie.service.feign.TicketInterfaceFeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -21,11 +23,17 @@ public class UserService {
 
 
     @Autowired
-    private UserInterfaceFeign userInterfaceFeign;
+    private MovieInterfaceFeign movieInterfaceFeign;
+
+    @Autowired
+    private TicketInterfaceFeign ticketInterfaceFeign;
+
+    @Autowired
+    private OrderInterfaceFeign orderInterfaceFeign;
 
     //@HystrixCommand(fallbackMethod = "buyMovieFallbackMethod")
     public R buyMovie(String id) {
-        return userInterfaceFeign.getNewMovie(id);
+        return movieInterfaceFeign.getNewMovie(id);
     }
 
     public Map<String, Object> buyMovieFallbackMethod(Integer id) {
@@ -37,5 +45,15 @@ public class UserService {
         movie.setMovieName("购买失败！");
         result.put("movie", movie);
         return result;
+    }
+
+    public R queryTicketByMovieId(String movieId) {
+        return ticketInterfaceFeign.queryTicketByMovieId(movieId);
+    }
+
+    public R buyTicketById(String ticketId, String userId) {
+        ticketInterfaceFeign.buyTicketById(ticketId, userId);
+        orderInterfaceFeign.generateOrder(ticketId, userId);
+        return R.ok("买票成功！");
     }
 }

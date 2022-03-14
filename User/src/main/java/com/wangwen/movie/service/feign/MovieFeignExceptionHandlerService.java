@@ -1,4 +1,4 @@
-package com.wangwen.movie.service;
+package com.wangwen.movie.service.feign;
 
 import com.wangwen.core.domain.R;
 import com.wangwen.movie.bean.Movie;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
  * @motto 恢弘志士之气，不宜妄自菲薄
  */
 @Component
-public class MovieFeignExceptionHandlerService implements UserInterfaceFeign {
+public class MovieFeignExceptionHandlerService implements MovieInterfaceFeign {
 
     @Override
     public R getNewMovie(String id) {

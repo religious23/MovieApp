@@ -13,6 +13,7 @@
         <module>Movie</module>
         <module>User</module>
         <module>common</module>
+        <module>Ticket</module>
     </modules>
     <name>SpringCloud</name>
     <description>SpringCloud for test</description>

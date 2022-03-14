@@ -1,4 +1,4 @@
-package com.wangwen.movie.service;
+package com.wangwen.movie.service.feign;
 
 import com.wangwen.core.domain.R;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @date 2022-01-05
  */
 @FeignClient(value = "MOVIE", fallback = MovieFeignExceptionHandlerService.class)
-public interface UserInterfaceFeign {
-    @GetMapping("/movie")
+public interface MovieInterfaceFeign {
+    @GetMapping("/buyMovie")
     R getNewMovie(@RequestParam("id") String id);
 }
