@@ -1,4 +1,4 @@
-package com.wangwen.movie.service.feign;
+package com.wangwen.user.service.feign;
 
 import com.wangwen.core.domain.R;
 import org.springframework.stereotype.Component;
@@ -14,6 +14,11 @@ import org.springframework.stereotype.Component;
 public class TicketFeignExceptionHandlerService implements TicketInterfaceFeign {
     @Override
     public R queryTicketByMovieId(String movieId) {
+        return R.ok(null, "此电影暂无电影票！");
+    }
+
+    @Override
+    public R buyTicketById(String ticketId, String userId) {
         return R.ok(null, "此电影暂无电影票！");
     }
 }

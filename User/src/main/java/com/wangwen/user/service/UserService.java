@@ -1,10 +1,10 @@
-package com.wangwen.movie.service;
+package com.wangwen.user.service;
 
 import com.wangwen.core.domain.R;
-import com.wangwen.movie.bean.Movie;
-import com.wangwen.movie.service.feign.MovieInterfaceFeign;
-import com.wangwen.movie.service.feign.OrderInterfaceFeign;
-import com.wangwen.movie.service.feign.TicketInterfaceFeign;
+import com.wangwen.user.bean.Movie;
+import com.wangwen.user.service.feign.MovieInterfaceFeign;
+import com.wangwen.user.service.feign.OrderInterfaceFeign;
+import com.wangwen.user.service.feign.TicketInterfaceFeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.wangwen.movie.service.feign;
+package com.wangwen.user.service.feign;
 
 import com.wangwen.core.domain.R;
 import org.springframework.cloud.openfeign.FeignClient;

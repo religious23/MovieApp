@@ -1,4 +1,4 @@
-package com.wangwen.movie.bean;
+package com.wangwen.user.bean;
 
 import java.io.Serializable;
 

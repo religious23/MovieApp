@@ -24,4 +24,9 @@ public class TicketServiceImpl implements TicketService {
     public List<TicketVo> queryTicketByMovieId(String movieId) {
         return ticketMapper.queryTicketByMovieId(movieId);
     }
+
+    @Override
+    public Integer buyTicketById(String ticketId, String userId) {
+        return ticketMapper.buyTicketById(ticketId, userId);
+    }
 }

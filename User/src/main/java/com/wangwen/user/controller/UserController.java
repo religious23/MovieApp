@@ -1,7 +1,7 @@
-package com.wangwen.movie.controller;
+package com.wangwen.user.controller;
 
 import com.wangwen.core.domain.R;
-import com.wangwen.movie.service.UserService;
+import com.wangwen.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

@@ -7,4 +7,8 @@
     <select id="queryTicketByMovieId" resultType="com.wangwen.ticket.bean.TicketVo">
 select ticket_id AS ticketId,movie_id AS movieId,user_id AS userId from ticket where movie_id=#{movieId};
     </select>
+
+    <update id="buyTicketById">
+        update ticket set ticket_status=0,user_id=#{userId} where ticket_id=#{ticketId} and user_id is null and ticket_status=1
+    </update>
 </mapper>

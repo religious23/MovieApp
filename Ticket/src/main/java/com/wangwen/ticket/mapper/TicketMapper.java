@@ -17,4 +17,6 @@ import java.util.List;
 public interface TicketMapper {
 
     List<TicketVo> queryTicketByMovieId(@Param("movieId") String movieId);
+
+    Integer buyTicketById(@Param("ticketId") String ticketId, @Param("userId") String userId);
 }

@@ -13,4 +13,6 @@ import java.util.List;
  */
 public interface TicketService {
     List<TicketVo> queryTicketByMovieId(String movieId);
+
+    Integer buyTicketById(String ticketId, String userId);
 }

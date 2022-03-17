@@ -4,6 +4,7 @@ import com.wangwen.core.domain.R;
 import com.wangwen.ticket.service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -22,5 +23,10 @@ public class TicketController {
     @GetMapping("/queryTicketByMovieId")
     public R queryTicketByMovieId(String movieId) {
         return R.ok(ticketService.queryTicketByMovieId(movieId));
+    }
+
+    @GetMapping("/buyTicketById")
+    public R buyTicketById(String ticketId, String userId) {
+        return R.ok(ticketService.buyTicketById(ticketId, userId));
     }
 }

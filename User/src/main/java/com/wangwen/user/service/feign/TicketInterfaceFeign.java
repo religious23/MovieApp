@@ -1,4 +1,4 @@
-package com.wangwen.movie.service.feign;
+package com.wangwen.user.service.feign;
 
 import com.wangwen.core.domain.R;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -18,5 +18,5 @@ public interface TicketInterfaceFeign {
     R queryTicketByMovieId(@RequestParam("movieId") String movieId);
 
     @GetMapping("/buyTicketById")
-    R buyTicketById(@RequestParam("movieId") String ticketId, @RequestParam("movieId") String userId);
+    R buyTicketById(@RequestParam("ticketId") String ticketId, @RequestParam("userId") String userId);
 }

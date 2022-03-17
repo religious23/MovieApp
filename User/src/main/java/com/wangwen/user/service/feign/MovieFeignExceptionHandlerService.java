@@ -1,7 +1,7 @@
-package com.wangwen.movie.service.feign;
+package com.wangwen.user.service.feign;
 
 import com.wangwen.core.domain.R;
-import com.wangwen.movie.bean.Movie;
+import com.wangwen.user.bean.Movie;
 import org.springframework.stereotype.Component;
 
 /**

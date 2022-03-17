@@ -1,4 +1,4 @@
-package com.wangwen.movie.mapper;
+package com.wangwen.user.mapper;
 
 import org.springframework.stereotype.Repository;
 
